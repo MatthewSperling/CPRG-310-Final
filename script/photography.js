@@ -1,24 +1,40 @@
 const pics = [
     {
-        src: './assets/gallery/camera.jpg',
-        title: 'Home Banner',
-        date: 'September 10, 2024',
-        details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum adipisci impedit itaque quibusdam?'
+        src: '.assets/gallery/talking.jpg',
+        title: 'Guests at International Womans day event 2024',
+        date: 'March 8, 2024',
+        details: 'Two people talking at Interantional womans day 2024'
     },
     {
-        src: './assets/gallery/studio.jpg',
-        title: 'Moneky',
-        date: 'September 11, 2024',
-        details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.'
+        src: '.assets/gallery/talking2.jpg',
+        title: 'Guests watching at International Womans day 2024',
+        date: 'March 8, 2024',
+        details: 'Two people at Interantional womans day 2024'
     },
     {
-        src: './assets/gallery/monkey.jpg',
-        title: 'Monkeyyyy',
-        date: 'September 13, 2024',
-        details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.'
+        src: '.assets/gallery/splits2.jpg',
+        title: 'Contortionist Dancer at International Womans day 2024',
+        date: 'March 8, 2024',
+        details: 'Contortionist Dancer at Interantional womans day 2024'
     },
-    
-    
+    {
+        src: '.assets/gallery/splits.jpg',
+        title: 'Contortionist Dancer at International Womans day 2024',
+        date: 'March 8, 2024',
+        details: 'Contortionist Dancer at Interantional womans day 2024'
+    },
+    {
+        src: '.assets/gallery/splits2.jpg',
+        title: 'Contortionist Dancer at International Womans day 2024',
+        date: 'March 8, 2024',
+        details: 'Contortionist Dancer at Interantional womans day 2024'
+    },
+    {
+        src: '.assets/gallery/speaker2.jpg',
+        title: 'Contortionist Dancer at International Womans day 2024',
+        date: 'March 8, 2024',
+        details: 'Contortionist Dancer at Interantional womans day 2024'
+    },
 ];
 
 let gallery = document.getElementById('gallery-section');
@@ -33,14 +49,14 @@ let load = function (template) {
         let hoverText = temp.querySelectorAll('.hover-text')[0];
 
         //Set Picture info
-        img.src = pic.src; 
-        hoverText.textContent = pic.title; 
-        
+        img.src = pic.src;
+        hoverText.textContent = pic.title;
+
         //Add click event 
         let cardElement = temp.querySelector('.gallery-card');
-        cardElement.addEventListener('click', ()=>{
+        cardElement.addEventListener('click', () => {
             openModal(pic);
-            
+
         });
 
         gallery.appendChild(cardElement)
@@ -64,7 +80,7 @@ loadTemplate('./templates/gallery-card.html');
 let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 let openModal = function (picData) {
-    
+
     let title = document.querySelector(".modal-content h3");
     let date = document.querySelector(".modal-content h4");
     let details = document.querySelector(".modal-content span");
@@ -84,8 +100,8 @@ let closeModal = function () {
 }
 span.addEventListener('click', closeModal);
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
