@@ -1,0 +1,58 @@
+.hero-banner {
+    background-image: url('../assets/camera.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-color);
+    text-align: center;
+    padding: 10rem 2rem;
+}
+
+.hero-banner h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-banner p {
+    font-size: 1.8rem;
+}
+
+.about-content {
+    padding: 5rem 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    background-color: var(--gray-color);
+}
+
+.about-content article {
+    flex: 1 1 45%;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.about-content figure {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.about-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.partners {
+    padding: 5rem 10rem;
+    text-align: center;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.partners h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.partners p {
+    font-size: 1.6rem;
+}
