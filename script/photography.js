@@ -6,6 +6,12 @@ const pics = [
         details: 'Two people talking and laughing'
     },
     {
+        src: './assets/gallery/dance2.jpg',
+        title: 'Dancers at WINS International Womans day 2024',
+        date: 'March 8, 2024',
+        details: 'Dancers at WINS International Womans day 2024'
+    },
+    {
         src: './assets/gallery/talking2.jpg',
         title: 'Guests watching at WINS International Womans day 2024',
         date: 'March 8, 2024',
@@ -16,12 +22,6 @@ const pics = [
         title: 'Contortionist Dancer at WINS International Womans day 2024',
         date: 'March 8, 2024',
         details: 'Contortionist Dancer at Interantional womans day 2024'
-    },
-    {
-        src: './assets/gallery/splits.jpg',
-        title: 'Contortionist Dancer at International Womans day 2024',
-        date: 'March 8, 2024',
-        details: 'Contortionist Dancer at Interantional womans day 2024' 
     },
     {
         src: './assets/gallery/speaker.jpg',
@@ -84,10 +84,10 @@ const pics = [
         details: 'Dancers at WINS International Womans day 2024'
     },
     {
-        src: './assets/gallery/dance2.jpg',
-        title: 'Dancers at WINS International Womans day 2024',
+        src: './assets/gallery/splits.jpg',
+        title: 'Contortionist Dancer at International Womans day 2024',
         date: 'March 8, 2024',
-        details: 'Dancers at WINS International Womans day 2024'
+        details: 'Contortionist Dancer at Interantional womans day 2024' 
     },
 ];
  
