@@ -52,3 +52,14 @@ h4 {
     font-size: clamp(1.5rem, 2rem, 3rem);
 
 }
+
+@media (max-width: 768px) {
+    #message {
+        padding: 0 auto;
+    }
+
+    #services {
+        display: flex;
+        flex-direction: column;
+    }
+}
