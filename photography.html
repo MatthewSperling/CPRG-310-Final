@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video/Drone</title>
+    <title>Audio</title>
     <link rel="stylesheet" href="https://use.typekit.net/let1pqf.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/layout.css">
@@ -11,29 +11,60 @@
     <link rel="stylesheet" href="./css/state.css">
     <link rel="stylesheet" href="./css/photography.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module" defer></script>
+
     <script src="./script/initialize.js" defer></script>
-    <script src="./script/photography.js" defer></script>
+    <script src="./script/audio.js" defer></script>
 </head>
 <body>
     <header id="header-container"></header>
     <main>
-        <section class="parallax camera-bg ">
-            <h2>Photo Gallery</h2>
+        <section class="parallax audio-bg bg-gray">
+            <h2>Capturing Moments, Creating Memories</h2>
         </section>
-        <section id="gallery-section" class="d-flex flex-wrap"></section>
-        <!-- The Modal -->
-        <section id="myModal" class="modal">
-            <header>
-                <span class="close"><i class="fa-solid fa-xmark"></i></span>
-            </header>
-            <!-- Modal content -->
-            <main class="modal-content">
-                <h3></h3>
-                <h4></h4>
-                <span></span>
-                <img>
-            </main>
 
+        <section>
+            <span id="message">
+                Whether it’s a wedding, a corporate event, or professional headshots, our photography services are designed to meet your needs. With a keen eye for detail, we ensure every photo tells a story.
+
+        </section>
+
+        <section class="d-flex gap-4 " id="services">
+            <article class="fb-30">
+                <figure>
+                    <img src="./assets/microphones.jpg" alt="Night Sparrow Productions Studio" height="497" width="413">
+                    <figcaption>WINS Womans Day Even 2024</figcaption>
+                </figure>
+                <h4>Event photography</h4>
+                <hr>
+                <span>
+                    From narration for promotional videos to dubbing and ADR (Automated Dialogue Replacement), we deliver voiceovers that captivate your audience. Using professional-grade microphones and precise editing, we ensure every word resonates with clarity and emotion.
+                </span>
+            </article>
+
+            <article class="fb-30">
+                <figure>
+                    <img src="./assets/mixer.jpg" alt="Night Sparrow Productions Studio" height="497" width="413">
+                    <figcaption>WINS</figcaption>
+                </figure>
+                <h4>Portraits and headshots</h4>
+                <hr>
+                <span>
+                    We offer a complete podcast production package, providing everything you need for a professional result. From recording, whether in-studio or remote, with high-quality equipment to ensure exceptional sound, to meticulous editing that removes unwanted noise, adjusts levels, and adds intros and outros for a seamless listening experience, we’ve got you covered. We also include mastering to polish your podcast to meet professional audio standards, ensuring it’s ready for all streaming platforms.
+                </span>
+            </article>
+
+            <article class="fb-30">
+                <figure>
+                    <img src="./assets/rack.jpg" alt="Night Sparrow Productions Studio" height="497" width="413">
+                    <figcaption>WINS</figcaption>
+                </figure>
+                <h4>Corporate and Real Estate photography</h4>
+                <hr>
+                <span>
+                    Great visuals deserve equally great sound, and we specialize in recording and mastering audio to complement your projects. Whether it’s talking head videos for YouTube, corporate presentations, or interviews, we ensure every word is clear and engaging. For live events or outdoor shoots, our on-location recording captures crisp sound using portable audio solutions. We also offer custom sound design, adding sound effects, ambient noise, and music to enhance the emotional impact of your video.
+                </span>
+            </article>
         </section>
     </main>
     <footer id="footer-container"></footer>
