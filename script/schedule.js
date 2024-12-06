@@ -31,9 +31,127 @@ let calendar = new FullCalendar.Calendar(calendarEl, {
   });
 calendar.render();
 
+// Validation function
+function validateForm() {
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const date = document.getElementById('date');
+    const time = document.getElementById('time');
+    const services = document.getElementById('services');
+
+// ADDED JS CONTENT FOR VALIDATION
+
+    // Reset all error styles and messages
+    clearErrors([name, email, date, time, services]);
+
+    let isValid = true;
+
+    if (!name.value.trim()) {
+        showError(name, '*Please enter your name.');
+        isValid = false;
+    }
+
+    if (!email.value.trim() || !isValidEmail(email.value)) {
+        showError(email, '*Please enter a valid email address.');
+        isValid = false;
+    }
+
+    if (!date.value.trim()) {
+        showError(date, '*Please select a preferred date.');
+        isValid = false;
+    }
+
+    if (!time.value.trim()) {
+        showError(time, '*Please select a preferred time.');
+        isValid = false;
+    }
+
+    if (!services.value || services.value === '#') {
+        showError(services, '*Please select a service.');
+        isValid = false;
+    }
+
+    return isValid; // Return true only if all validations passed
+}
+
+
+// Helper function to validate email format
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Helper function to show an error message
+function showError(input, message) {
+    input.classList.add('error');
+
+    // Check if an error message already exists
+    let error = input.nextElementSibling;
+    if (!error || !error.classList.contains('error-message')) {
+        // Create a new error message
+        error = document.createElement('span');
+        error.classList.add('error-message');
+        error.style.color = 'red';
+        input.parentNode.insertBefore(error, input.nextSibling);
+    }
+
+    // Set the error message text
+    error.textContent = message;
+}
+
+// Helper function to clear all error styles and messages
+function clearErrors(fields) {
+    fields.forEach(field => {
+        field.classList.remove('error');
+        const error = field.nextElementSibling;
+        if (error && error.classList.contains('error-message')) {
+            error.remove();
+        }
+    });
+}
+
+// Real-time validation function
+function addRealTimeValidation() {
+    const fields = document.querySelectorAll('#name, #email, #date, #time, #services');
+
+    fields.forEach(field => {
+        field.addEventListener('input', () => {
+            if (field.type === 'email' && !isValidEmail(field.value)) {
+                showError(field, 'Please enter a valid email address.');
+            } else if (field.value.trim() === '' || (field.tagName === 'SELECT' && field.value === '#')) {
+                if (field.tagName === 'SELECT') {
+                    showError(field, 'Please select a service.');
+                } else {
+                    showError(field, `Please fill out this field.`);
+                }
+            } else {
+                clearErrors([field]); // Remove the error if the input is valid
+            }
+        });
+
+        // For dropdown (select), listen to the "change" event
+        if (field.tagName === 'SELECT') {
+            field.addEventListener('change', () => {
+                if (field.value !== '#') {
+                    clearErrors([field]); // Remove error if a valid option is selected
+                } else {
+                    showError(field, 'Please select a service.');
+                }
+            });
+        }
+    });
+}
+
+// Initialize real-time validation when the page loads
+document.addEventListener('DOMContentLoaded', addRealTimeValidation);
+
+
 // Set Event in Google
 
 const addEvent = () => {
+    if (!validateForm()) {
+        return; // Exit the function if validation fails
+    }
     // const title = document.getElementById("title").value;
     // const desc = document.getElementById("desc").value;
     // const date = document.getElementById("date").value;
