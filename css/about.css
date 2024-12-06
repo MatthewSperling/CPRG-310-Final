@@ -1,5 +1,5 @@
 .hero-banner {
-    background-image: url('../assets/camera.jpg');
+    background-image: url('../assets/preamp.jpg');
     background-size: cover;
     background-position: center;
     color: var(--light-color);
@@ -41,18 +41,3 @@
     border-radius: 5px;
 }
 
-.partners {
-    padding: 5rem 10rem;
-    text-align: center;
-    background-color: var(--dark-color);
-    color: var(--light-color);
-}
-
-.partners h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.partners p {
-    font-size: 1.6rem;
-}
