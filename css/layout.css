@@ -146,7 +146,7 @@
     list-style: none;
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 0;
     margin: 0;
 }
@@ -168,4 +168,10 @@
 
 #footer-logo {
     margin-left: 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
 }
